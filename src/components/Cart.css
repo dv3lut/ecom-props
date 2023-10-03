@@ -1,7 +1,9 @@
 .cart {
     flex-shrink: 0;
     width: 30%; /* Example width, adjust as needed */
+    height: 100vh;
     position: sticky;
     top: 0;
     overflow-y: auto; /* In case the cart has many items and needs to scroll */
+    z-index: 100;
 }

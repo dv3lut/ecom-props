@@ -1,0 +1,21 @@
+.search-bar-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 20px; /* Padding to ensure search bar isn't at the very edge of the screen */
+    margin-top: 20px; /* Gap between H1 and search bar */
+}
+
+.search-bar {
+    width: 33vw; /* You can adjust this width */
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Adjust to preference */
+    background-color: #d7f4ff; /* A light gray, adjust to preference */
+    outline: none; /* Remove focus ring, but ensure you handle focus for accessibility */
+    transition: background-color 0.3s ease; /* Smooth background-color change */
+}
+
+.search-bar:focus {
+    background-color: #e0e0e0; /* A slightly darker gray when focused */
+}

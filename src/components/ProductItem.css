@@ -34,12 +34,17 @@
     -webkit-box-orient: vertical;   /* Set the direction of the content to vertical */
     overflow: hidden;               /* Ensures overflow is hidden */
     max-width: 250px;               /* Adjust as needed for your design */
-    /* Ensure there's a defined height to display three lines properly */
+}
+
+.product-category {
+    font-size: smaller;
+    color: #6c757d;                 /* A gray shade */
 }
 
 .product-price {
     font-size: larger;
     font-weight: bold;
+    color: #004085;                 /* A blue shade */
 }
 
 

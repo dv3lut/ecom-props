@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -51,4 +52,6 @@ header {
 .content {
   display: flex;
   flex: 1; /* It takes up the remaining space after the header */
+  overflow: visible;
+  position: relative; /* This can sometimes help with sticky positioning */
 }

@@ -8,7 +8,6 @@ function ProductList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                console.log("Fetching products data...");
                 const response = await fetch("https://fakestoreapi.com/products");
                 if (!response.ok)
                     throw new Error("Fetching products data failed with status code " + response.status);

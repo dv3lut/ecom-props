@@ -4,4 +4,5 @@
     gap: 20px;
     overflow-y: auto; /* Allows scrolling if there are many products */
     flex-grow: 1; /* Takes up the available space */
+    margin-top: 20px;
 }
