@@ -4,7 +4,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    height: auto;      /* This will allow the container to adjust based on content */
+    height: 500px;      /* This will allow the container to adjust based on content */
     min-height: 300px;
     display: flex;
     flex-direction: column;

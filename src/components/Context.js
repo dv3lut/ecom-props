@@ -4,8 +4,8 @@ const Context = createContext();
 
 function Provider({children}) {
     const [productsData, setProductsData] = useState([]);
+    const [filteredProductsData, setFilteredProductsData] = useState([]);
     const [cartData, setCartData] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
 
 
     const addProductToCart = (product) => {
@@ -17,14 +17,22 @@ function Provider({children}) {
         setCartData(newCartData);
     };
 
-    const filterProductsFromSearch = (value) => {
-        console.log(searchValue);
-        setSearchValue(value);
-        return productsData.filter(product => product.title.toLowerCase().includes(value.toLowerCase()));
-    }
+    const filterProducts = (searchTerm) => {
+        console.log(searchTerm);
+        if (searchTerm === "") {
+            setFilteredProductsData(productsData);
+        }
+        else {
+            const filtered = productsData.filter(product => 
+                product.title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            setFilteredProductsData(filtered);
+        }
+    };
+
 
     return (
-        <Context.Provider value={{productsData, setProductsData, cartData, addProductToCart, removeProductFromCart, setSearchValue, filterProductsFromSearch}}>
+        <Context.Provider value={{setProductsData, cartData, addProductToCart, removeProductFromCart, filteredProductsData, setFilteredProductsData, filterProducts}}>
             {children}
         </Context.Provider>
     )

@@ -4,7 +4,7 @@ import ProductItem from "./ProductItem";
 import "./ProductList.css";
 
 function ProductList() {
-    const { productsData, setProductsData } = useContext(Context);
+    const { filteredProductsData, setFilteredProductsData, setProductsData } = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,6 +14,7 @@ function ProductList() {
                     throw new Error("Fetching products data failed with status code " + response.status);
                 const jsonData = await response.json();
                 setProductsData(jsonData);
+                setFilteredProductsData(jsonData);
             }
             catch (err) {
                 console.log(err);
@@ -26,8 +27,8 @@ function ProductList() {
     return (
         <div className="product-list">
             {
-                productsData.length > 0 ?
-                    (productsData.map((product) => 
+                filteredProductsData.length > 0 ?
+                    (filteredProductsData.map((product) => 
                         <ProductItem key={product.id} product={product} />
                     ))
                     :
