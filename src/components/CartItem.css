@@ -1,0 +1,70 @@
+/* Style for the cart item */
+.cart-item {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    padding: 5px;
+    border-bottom: 1px solid #e0e0e0; /* slight separator between items */
+    font-weight: bold;
+}
+
+/* Style for the product image in the cart */
+.cart-item img {
+    width: 60px; /* or any desired width */
+    height: 60px;
+    object-fit: contain; /* to maintain aspect ratio */
+    border-radius: 5px; /* slight rounded corners */
+    margin-right: 15px; /* space between image and title/price */
+}
+
+/* Style for the product info in the cart */
+.cart-item-info {
+    display: flex;
+    flex-direction: column; /* stack title and price vertically */
+    align-items: flex-start; /* left-align title and price */
+    flex: 1; /* to ensure the info takes the maximum width available */
+}
+
+.cart-item-title {
+    font-size: 16px; /* adjust as needed */
+    margin-bottom: 5px; /* space between title and price */
+}
+
+.cart-item-price {
+    font-size: 14px; /* adjust as needed */
+    margin-bottom: 10px; /* space between price and remove button */
+}
+
+.btn-cart-remove {
+    background-color: transparent; /* no background */
+    border: none;
+    cursor: pointer;
+    font-size: 20px; /* adjust as needed */
+    color: #d32f2f; /* red color, adjust if needed */
+    transition: color 0.3s ease;
+}
+
+.btn-cart-remove:hover {
+    color: #f44336; /* slightly brighter red on hover */
+}
+
+.btn-cart-remove:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(244, 67, 54, 0.5); /* subtle red glow on focus for accessibility */
+}
+
+.cart-item-category {
+    font-size: smaller;
+    color: #6c757d;                 /* A gray shade */
+    margin-bottom: 0px;
+}
+
+.cart-item-quantity {
+    font-size: smaller;
+    color: #580000;                 /* A gray shade */
+    margin-bottom: 0px;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: #000000;                 /* A blue shade */
+}

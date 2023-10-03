@@ -5,6 +5,7 @@ import "./ProductList.css";
 
 function ProductList() {
     const { productsData, setProductsData } = useContext(Context);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -14,18 +15,23 @@ function ProductList() {
                 const jsonData = await response.json();
                 setProductsData(jsonData);
             }
-            catch (err)
-            {
+            catch (err) {
                 console.log(err);
             }
         };
         fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
     return (
         <div className="product-list">
             {
-                productsData.length > 0 ? (productsData.map((product) => ProductItem(product))) : (<p>No products</p>)
+                productsData.length > 0 ?
+                    (productsData.map((product) => 
+                        <ProductItem key={product.id} product={product} />
+                    ))
+                    :
+                    (<p>No products</p>)
             }
         </div>
     );

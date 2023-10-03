@@ -1,6 +1,6 @@
 .cart {
     flex-shrink: 0;
-    width: 30%; /* Example width, adjust as needed */
+    width: 40%; /* Example width, adjust as needed */
     height: 100vh;
     position: sticky;
     top: 0;

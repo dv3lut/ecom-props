@@ -1,25 +1,34 @@
 import { useContext } from 'react';
 import './Cart.css'
 import { Context } from './Context';
+import CartItem from './CartItem';
 
 function Cart() {
     const { cartData } = useContext(Context);
+
+    const groupedProducts = cartData.reduce((acc, product) => {
+        if (!acc[product.id]) {
+            acc[product.id] = { ...product, quantity: 0 };
+        }
+        acc[product.id].quantity += 1;
+        return acc;
+    }, {});
+
+    const sumAndRoundProducts = (sum, product) => {
+        return Math.round((sum + product.price) * 100) / 100;
+    }
+
+
     return (
         <div className="cart">
-            <h2>- Votre panier en cours -</h2>
+            <h3>- Panier en cours -</h3>
             <ul className="cart-list">
                 {
-                    cartData.length > 0 ? (cartData.map((product) => (
-                        <li className="cart-item" key={product.id}>
-                            <img src={product.image} alt={product.title} />
-                            <div className="cart-item-info">
-                                <h3 className="cart-item-title">{product.title}</h3>
-                                <p className="cart-item-category">{product.category.toUpperCase()}</p>
-                                <p className="cart-item-price">{product.price} €</p>
-                            </div>
-                        </li>
-                    ))) : (<p>Votre panier est vide</p>)
+                    Object.values(groupedProducts).map(product => (
+                        <CartItem key={product.id} product={product} quantity={product.quantity} />
+                    ))
                 }
+                <li className="cart-item">Total : {cartData.reduce(sumAndRoundProducts, 0)} €</li>
             </ul>
         </div>
     );
