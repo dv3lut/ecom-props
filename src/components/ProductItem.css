@@ -25,6 +25,7 @@
     -webkit-box-orient: vertical;   /* Set the direction of the content to vertical */
     overflow: hidden;               /* Ensures overflow is hidden */
     max-width: 250px;               /* Adjust as needed for your design */
+    color: #004085;
     /* Ensure there's a defined height to display three lines properly */
 }
 
