@@ -1,0 +1,70 @@
+.product {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: auto;      /* This will allow the container to adjust based on content */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.product img {
+    width: auto;      /* or you can use: 100% if you want to fill the container width */
+    height: 150px;    /* Set this to whatever fixed height you desire */
+    display: block;
+    object-fit: cover;
+    margin: auto;
+}
+
+.product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;           /* Number of lines you want to display */
+    -webkit-box-orient: vertical;   /* Set the direction of the content to vertical */
+    overflow: hidden;               /* Ensures overflow is hidden */
+    max-width: 250px;               /* Adjust as needed for your design */
+    /* Ensure there's a defined height to display three lines properly */
+}
+
+.product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;           /* Number of lines you want to display */
+    -webkit-box-orient: vertical;   /* Set the direction of the content to vertical */
+    overflow: hidden;               /* Ensures overflow is hidden */
+    max-width: 250px;               /* Adjust as needed for your design */
+    /* Ensure there's a defined height to display three lines properly */
+}
+
+.product-price {
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+.product-button {
+    background-color: #007BFF;  /* This is a blue shade; you can adjust the color */
+    color: #FFF;               /* White text color */
+    border: none;              /* Removing the default border */
+    padding: 10px 20px;        /* Padding around the text */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 16px;           /* Adjust if needed */
+    cursor: pointer;           /* Hand cursor on hover */
+    text-align: center;        /* Center the text */
+    margin: 20px 0;            /* Some margin to space it from other content */
+    width: 100%;               /* Take the full width of its container */
+    max-width: 200px;          /* Limit its width */
+    display: block;            /* To be able to apply margins and have it on its own line */
+    margin-left: auto;         /* With combination of margin-right it will center the button */
+    margin-right: auto;
+}
+
+.product-button:hover {
+    background-color: #0056b3; /* A darker shade of blue for hover */
+}
+
+.product-button:focus {
+    outline: none;             /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0,123,255,0.5); /* Add a subtle glow on focus for accessibility */
+}

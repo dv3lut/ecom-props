@@ -1,0 +1,7 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust 300px if needed */
+    gap: 20px;
+    overflow-y: auto; /* Allows scrolling if there are many products */
+    flex-grow: 1; /* Takes up the available space */
+}

@@ -1,3 +1,17 @@
+I will use this API for data : https://fakestoreapi.com/
+# US 1
+### En tant qu'user, je veux pouvoir sélectionner un article parmi une liste d'article
+Spec : Afficher une liste d'articles statique avec un nom, un prix et autres éléments optionnels (image, description etc...), avec un bouton mettre dans le panier
+
+# US 2
+### En tant qu'user, je veux pouvoir consulter mon panier en temps réel à droite, et enlever des articles de mon panier
+Spec : Afficher à droite le panier
+
+# US 3
+### En tant qu'user, je veux pouvoir chercher un article par son nom dans une barre de recherche
+Spec : Avoir une barre de recherche qui filtre la liste d'articles
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
